@@ -10,6 +10,8 @@
 
 * 开源协议
 
+* [huangyl-commons](./huangyl-commons) 工具包模块
+
 ## 开源协议
 
 [Apache-2.0](https://www.apache.org/licenses/LICENSE-2.0.html)
