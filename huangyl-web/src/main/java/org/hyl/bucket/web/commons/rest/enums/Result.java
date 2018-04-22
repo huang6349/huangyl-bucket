@@ -1,18 +1,19 @@
 package org.hyl.bucket.web.commons.rest.enums;
 
 import org.apache.commons.lang3.StringUtils;
+import org.springframework.http.HttpStatus;
 
 public enum Result {
-    SUCCESS(200, "请求成功"),
-    SUCCESS_POST(200, "新增数据成功"),
-    SUCCESS_DELETE(200, "删除数据成功"),
-    SUCCESS_GET(200, "查询数据成功"),
-    SUCCESS_PUT(200, "修改数据成功"),
-    ERROR(500, "请求失败，请稍后再试"),
-    ERROR_POST(500, "新增数据失败，请稍后再试"),
-    ERROR_DELETE(500, "删除数据失败，请稍后再试"),
-    ERROR_GET(500, "查询数据失败，请稍后再试"),
-    ERROR_PUT(500, "修改数据失败，请稍后再试");
+    SUCCESS(HttpStatus.OK.value(), "请求成功"),
+    SUCCESS_POST(HttpStatus.CREATED.value(), "新增数据成功"),
+    SUCCESS_DELETE(HttpStatus.OK.value(), "删除数据成功"),
+    SUCCESS_GET(HttpStatus.OK.value(), "查询数据成功"),
+    SUCCESS_PUT(HttpStatus.OK.value(), "修改数据成功"),
+    ERROR(HttpStatus.INTERNAL_SERVER_ERROR.value(), "请求失败，请稍后再试"),
+    ERROR_POST(HttpStatus.INTERNAL_SERVER_ERROR.value(), "新增数据失败，请稍后再试"),
+    ERROR_DELETE(HttpStatus.INTERNAL_SERVER_ERROR.value(), "删除数据失败，请稍后再试"),
+    ERROR_GET(HttpStatus.INTERNAL_SERVER_ERROR.value(), "查询数据失败，请稍后再试"),
+    ERROR_PUT(HttpStatus.INTERNAL_SERVER_ERROR.value(), "修改数据失败，请稍后再试");
 
     private final int state;
 
