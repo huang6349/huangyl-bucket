@@ -18,6 +18,8 @@ apply plugin: 'org.springframework.boot'
 sourceCompatibility = 1.8
 
 dependencies {
+    compile 'commons-collections:commons-collections'
     compile "org.apache.commons:commons-lang3:${commons_lang3_version}"
+    compile "com.google.guava:guava:${guava_version}"
     testCompile 'org.springframework.boot:spring-boot-starter-test'
 }
