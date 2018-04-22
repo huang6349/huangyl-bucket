@@ -1,3 +1,4 @@
 rootProject.name = 'huangyl-bucket'
 
 include 'huangyl-commons'
+include 'huangyl-web'
