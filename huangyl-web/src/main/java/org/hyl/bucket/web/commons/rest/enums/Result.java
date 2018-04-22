@@ -153,9 +153,6 @@ public enum Result {
             }
         };
 
-        Type() {
-        }
-
         public abstract int getState(Network network);
 
         public abstract String getMessage(Network network);
