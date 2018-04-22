@@ -9,6 +9,7 @@ import org.junit.Test;
 import java.util.*;
 
 public class RestUtilTest {
+
     private Integer state;
 
     private String message;
