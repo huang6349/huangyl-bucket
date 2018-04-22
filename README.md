@@ -14,6 +14,8 @@
 
 * [huangyl-web](./huangyl-web) 互联网操作模块
 
+* [huangyl-data](./huangyl-data) 数据操作模块
+
 ## 开源协议
 
 [Apache-2.0](https://www.apache.org/licenses/LICENSE-2.0.html)
