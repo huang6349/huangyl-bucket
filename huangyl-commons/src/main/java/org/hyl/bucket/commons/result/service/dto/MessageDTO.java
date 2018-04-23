@@ -1,5 +1,6 @@
 package org.hyl.bucket.commons.result.service.dto;
 
+import org.apache.commons.lang3.StringUtils;
 import org.hyl.bucket.commons.result.domain.Message;
 import org.hyl.bucket.commons.result.enums.MessageEnum;
 import org.hyl.bucket.commons.result.enums.NetworkEnum;
@@ -55,7 +56,7 @@ public class MessageDTO {
     }
 
     public static String getMessage(NetworkEnum network, String message) {
-        return (message != null) ? message : ((NetworkEnum.SUCCESS == network) ? MessageEnum.SUCCESS.getMessage() : MessageEnum.ERROR.getMessage());
+        return StringUtils.isNoneBlank(message) ? message : ((NetworkEnum.SUCCESS == network) ? MessageEnum.SUCCESS.getMessage() : MessageEnum.ERROR.getMessage());
     }
 
     public NetworkEnum getNetwork() {
