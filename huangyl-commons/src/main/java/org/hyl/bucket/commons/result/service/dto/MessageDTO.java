@@ -1,11 +1,12 @@
 package org.hyl.bucket.commons.result.service.dto;
 
 import org.hyl.bucket.commons.result.domain.Message;
-import org.hyl.bucket.commons.result.enums.Result;
+import org.hyl.bucket.commons.result.enums.MessageEnum;
+import org.hyl.bucket.commons.result.enums.NetworkEnum;
 
 public class MessageDTO {
 
-    private Result.Network network;
+    private NetworkEnum network;
 
     private Integer state;
 
@@ -20,7 +21,7 @@ public class MessageDTO {
     public MessageDTO() {
     }
 
-    public MessageDTO(Result.Network network, Integer state, String message, Object data, Object params) {
+    public MessageDTO(NetworkEnum network, Integer state, String message, Object data, Object params) {
         this.network = network;
         this.state = state;
         this.message = message;
@@ -28,7 +29,7 @@ public class MessageDTO {
         this.params = params;
     }
 
-    public MessageDTO(Result.Network network, Integer state, String message, Object data, String e, Object params) {
+    public MessageDTO(NetworkEnum network, Integer state, String message, Object data, String e, Object params) {
         this.network = network;
         this.state = state;
         this.message = message;
@@ -38,10 +39,10 @@ public class MessageDTO {
     }
 
     public static Message adapt(MessageDTO dto) {
-        Result.Network network = dto.getNetwork();
+        NetworkEnum network = dto.getNetwork();
         Message message = new Message();
-        message.setState(network.getState(dto.getState()));
-        message.setMessage(network.getMessage(dto.getMessage()));
+        message.setState(MessageDTO.getState(network, dto.getState()));
+        message.setMessage(MessageDTO.getMessage(network, dto.getMessage()));
         message.setData(dto.getData());
         message.setSuccess(network.isSuccess());
         message.setE(dto.getE());
@@ -49,11 +50,19 @@ public class MessageDTO {
         return message;
     }
 
-    public Result.Network getNetwork() {
+    public static Integer getState(NetworkEnum network, Integer state) {
+        return (state != null) ? state : ((NetworkEnum.SUCCESS == network) ? MessageEnum.SUCCESS.getState() : MessageEnum.ERROR.getState());
+    }
+
+    public static String getMessage(NetworkEnum network, String message) {
+        return (message != null) ? message : ((NetworkEnum.SUCCESS == network) ? MessageEnum.SUCCESS.getMessage() : MessageEnum.ERROR.getMessage());
+    }
+
+    public NetworkEnum getNetwork() {
         return network;
     }
 
-    public void setNetwork(Result.Network network) {
+    public void setNetwork(NetworkEnum network) {
         this.network = network;
     }
 
