@@ -53,33 +53,49 @@ public class RestMessageDTO extends MessageDTO {
     }
 
     public static Integer getState(NetworkEnum network, RestTypeEnum type, Integer state) {
+        if (state != null) {
+            return state;
+        }
         switch (type) {
             case POST:
-                return (state != null) ? state : ((NetworkEnum.SUCCESS == network) ? RestMessageEnum.SUCCESS_POST.getState() : RestMessageEnum.ERROR_POST.getState());
+                state = (NetworkEnum.SUCCESS == network) ? RestMessageEnum.SUCCESS_POST.getState() : RestMessageEnum.ERROR_POST.getState();
+                break;
             case DELETE:
-                return (state != null) ? state : ((NetworkEnum.SUCCESS == network) ? RestMessageEnum.SUCCESS_DELETE.getState() : RestMessageEnum.ERROR_DELETE.getState());
+                state = (NetworkEnum.SUCCESS == network) ? RestMessageEnum.SUCCESS_DELETE.getState() : RestMessageEnum.ERROR_DELETE.getState();
+                break;
             case GET:
-                return (state != null) ? state : ((NetworkEnum.SUCCESS == network) ? RestMessageEnum.SUCCESS_GET.getState() : RestMessageEnum.ERROR_GET.getState());
+                state = (NetworkEnum.SUCCESS == network) ? RestMessageEnum.SUCCESS_GET.getState() : RestMessageEnum.ERROR_GET.getState();
+                break;
             case PUT:
-                return (state != null) ? state : ((NetworkEnum.SUCCESS == network) ? RestMessageEnum.SUCCESS_PUT.getState() : RestMessageEnum.ERROR_PUT.getState());
+                state = (NetworkEnum.SUCCESS == network) ? RestMessageEnum.SUCCESS_PUT.getState() : RestMessageEnum.ERROR_PUT.getState();
+                break;
             default:
-                return (state != null) ? state : ((NetworkEnum.SUCCESS == network) ? RestMessageEnum.SUCCESS.getState() : RestMessageEnum.ERROR.getState());
+                state = (NetworkEnum.SUCCESS == network) ? RestMessageEnum.SUCCESS.getState() : RestMessageEnum.ERROR.getState();
         }
+        return state;
     }
 
     public static String getMessage(NetworkEnum network, RestTypeEnum type, String message) {
+        if (StringUtils.isNoneBlank(message)) {
+            return message;
+        }
         switch (type) {
             case POST:
-                return StringUtils.isNoneBlank(message) ? message : ((NetworkEnum.SUCCESS == network) ? RestMessageEnum.SUCCESS_POST.getMessage() : RestMessageEnum.ERROR_POST.getMessage());
+                message = (NetworkEnum.SUCCESS == network) ? RestMessageEnum.SUCCESS_POST.getMessage() : RestMessageEnum.ERROR_POST.getMessage();
+                break;
             case DELETE:
-                return StringUtils.isNoneBlank(message) ? message : ((NetworkEnum.SUCCESS == network) ? RestMessageEnum.SUCCESS_DELETE.getMessage() : RestMessageEnum.ERROR_DELETE.getMessage());
+                message = (NetworkEnum.SUCCESS == network) ? RestMessageEnum.SUCCESS_DELETE.getMessage() : RestMessageEnum.ERROR_DELETE.getMessage();
+                break;
             case GET:
-                return StringUtils.isNoneBlank(message) ? message : ((NetworkEnum.SUCCESS == network) ? RestMessageEnum.SUCCESS_GET.getMessage() : RestMessageEnum.ERROR_GET.getMessage());
+                message = (NetworkEnum.SUCCESS == network) ? RestMessageEnum.SUCCESS_GET.getMessage() : RestMessageEnum.ERROR_GET.getMessage();
+                break;
             case PUT:
-                return StringUtils.isNoneBlank(message) ? message : ((NetworkEnum.SUCCESS == network) ? RestMessageEnum.SUCCESS_PUT.getMessage() : RestMessageEnum.ERROR_PUT.getMessage());
+                message = (NetworkEnum.SUCCESS == network) ? RestMessageEnum.SUCCESS_PUT.getMessage() : RestMessageEnum.ERROR_PUT.getMessage();
+                break;
             default:
-                return StringUtils.isNoneBlank(message) ? message : ((NetworkEnum.SUCCESS == network) ? RestMessageEnum.SUCCESS.getMessage() : RestMessageEnum.ERROR.getMessage());
+                message = (NetworkEnum.SUCCESS == network) ? RestMessageEnum.SUCCESS.getMessage() : RestMessageEnum.ERROR.getMessage();
         }
+        return message;
     }
 
     public RestTypeEnum getType() {
