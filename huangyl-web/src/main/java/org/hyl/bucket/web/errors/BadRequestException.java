@@ -1,6 +1,6 @@
 package org.hyl.bucket.web.errors;
 
-import org.hyl.bucket.web.commons.rest.enums.Result;
+import org.hyl.bucket.web.commons.rest.enums.RestTypeEnum;
 import org.springframework.http.HttpStatus;
 
 public class BadRequestException extends InternalServerErrorException {
@@ -13,15 +13,15 @@ public class BadRequestException extends InternalServerErrorException {
         super(message, STATE);
     }
 
-    public BadRequestException(String message, Result.Type type) {
+    public BadRequestException(String message, RestTypeEnum type) {
         super(message, type, STATE);
     }
 
-    public BadRequestException(String message, Result.Type type, Object params) {
+    public BadRequestException(String message, RestTypeEnum type, Object params) {
         super(message, type, STATE, params);
     }
 
-    public BadRequestException(String message, Result.Type type, Object params, Object data) {
+    public BadRequestException(String message, RestTypeEnum type, Object params, Object data) {
         super(message, type, STATE, params, data);
     }
 

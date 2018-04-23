@@ -1,0 +1,99 @@
+package org.hyl.bucket.web.commons.rest.service.dto;
+
+import org.apache.commons.lang3.StringUtils;
+import org.hyl.bucket.commons.result.domain.Message;
+import org.hyl.bucket.commons.result.enums.NetworkEnum;
+import org.hyl.bucket.commons.result.service.dto.MessageDTO;
+import org.hyl.bucket.web.commons.rest.enums.RestMessageEnum;
+import org.hyl.bucket.web.commons.rest.enums.RestTypeEnum;
+
+public class RestMessageDTO extends MessageDTO {
+
+    private RestTypeEnum type;
+
+    public RestMessageDTO() {
+    }
+
+    public RestMessageDTO(NetworkEnum network, RestTypeEnum type, Integer state, String message, Object data, Object params) {
+        super(network, state, message, data, params);
+        this.type = type;
+    }
+
+    public RestMessageDTO(NetworkEnum network, RestTypeEnum type, Integer state, String message, Object data, String e, Object params) {
+        super(network, state, message, data, e, params);
+        this.type = type;
+    }
+
+    public static Message adapt(RestMessageDTO dto) {
+        NetworkEnum network = dto.getNetwork();
+        Message message = new Message();
+        message.setState(RestMessageDTO.getState(network, dto.getType(), dto.getState()));
+        message.setMessage(RestMessageDTO.getMessage(network, dto.getType(), dto.getMessage()));
+        message.setData(dto.getData());
+        message.setSuccess(network.isSuccess());
+        message.setE(dto.getE());
+        message.setParams(dto.getParams());
+        return message;
+    }
+
+    public static Integer getState(NetworkEnum network) {
+        return RestMessageDTO.getState(network, RestTypeEnum.DEFAULT);
+    }
+
+    public static String getMessage(NetworkEnum network) {
+        return RestMessageDTO.getMessage(network, RestTypeEnum.DEFAULT, null);
+    }
+
+    public static Integer getState(NetworkEnum network, RestTypeEnum type) {
+        return RestMessageDTO.getState(network, type, null);
+    }
+
+    public static String getMessage(NetworkEnum network, RestTypeEnum type) {
+        return RestMessageDTO.getMessage(network, type, null);
+    }
+
+    public static Integer getState(NetworkEnum network, RestTypeEnum type, Integer state) {
+        switch (type) {
+            case POST:
+                return (state != null) ? state : ((NetworkEnum.SUCCESS == network) ? RestMessageEnum.SUCCESS_POST.getState() : RestMessageEnum.ERROR_POST.getState());
+            case DELETE:
+                return (state != null) ? state : ((NetworkEnum.SUCCESS == network) ? RestMessageEnum.SUCCESS_DELETE.getState() : RestMessageEnum.ERROR_DELETE.getState());
+            case GET:
+                return (state != null) ? state : ((NetworkEnum.SUCCESS == network) ? RestMessageEnum.SUCCESS_GET.getState() : RestMessageEnum.ERROR_GET.getState());
+            case PUT:
+                return (state != null) ? state : ((NetworkEnum.SUCCESS == network) ? RestMessageEnum.SUCCESS_PUT.getState() : RestMessageEnum.ERROR_PUT.getState());
+            default:
+                return (state != null) ? state : ((NetworkEnum.SUCCESS == network) ? RestMessageEnum.SUCCESS.getState() : RestMessageEnum.ERROR.getState());
+        }
+    }
+
+    public static String getMessage(NetworkEnum network, RestTypeEnum type, String message) {
+        switch (type) {
+            case POST:
+                return StringUtils.isNoneBlank(message) ? message : ((NetworkEnum.SUCCESS == network) ? RestMessageEnum.SUCCESS_POST.getMessage() : RestMessageEnum.ERROR_POST.getMessage());
+            case DELETE:
+                return StringUtils.isNoneBlank(message) ? message : ((NetworkEnum.SUCCESS == network) ? RestMessageEnum.SUCCESS_DELETE.getMessage() : RestMessageEnum.ERROR_DELETE.getMessage());
+            case GET:
+                return StringUtils.isNoneBlank(message) ? message : ((NetworkEnum.SUCCESS == network) ? RestMessageEnum.SUCCESS_GET.getMessage() : RestMessageEnum.ERROR_GET.getMessage());
+            case PUT:
+                return StringUtils.isNoneBlank(message) ? message : ((NetworkEnum.SUCCESS == network) ? RestMessageEnum.SUCCESS_PUT.getMessage() : RestMessageEnum.ERROR_PUT.getMessage());
+            default:
+                return StringUtils.isNoneBlank(message) ? message : ((NetworkEnum.SUCCESS == network) ? RestMessageEnum.SUCCESS.getMessage() : RestMessageEnum.ERROR.getMessage());
+        }
+    }
+
+    public RestTypeEnum getType() {
+        return type;
+    }
+
+    public void setType(RestTypeEnum type) {
+        this.type = type;
+    }
+
+    @Override
+    public String toString() {
+        return "RestMessageDTO{" +
+                "type=" + type +
+                '}';
+    }
+}

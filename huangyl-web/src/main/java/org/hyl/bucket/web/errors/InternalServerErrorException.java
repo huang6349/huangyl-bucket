@@ -1,13 +1,13 @@
 package org.hyl.bucket.web.errors;
 
-import org.hyl.bucket.web.commons.rest.enums.Result;
+import org.hyl.bucket.web.commons.rest.enums.RestTypeEnum;
 import org.springframework.http.HttpStatus;
 
 public class InternalServerErrorException extends RuntimeException {
 
     private static final long serialVersionUID = -3554796752939797569L;
 
-    private Result.Type type = Result.Type.DEFAULT;
+    private RestTypeEnum type = RestTypeEnum.DEFAULT;
 
     private Integer state = HttpStatus.INTERNAL_SERVER_ERROR.value();
 
@@ -19,25 +19,25 @@ public class InternalServerErrorException extends RuntimeException {
         super(message);
     }
 
-    public InternalServerErrorException(String message, Result.Type type) {
+    public InternalServerErrorException(String message, RestTypeEnum type) {
         super(message);
         this.type = type;
     }
 
-    public InternalServerErrorException(String message, Result.Type type, Integer state) {
+    public InternalServerErrorException(String message, RestTypeEnum type, Integer state) {
         super(message);
         this.type = type;
         this.state = state;
     }
 
-    public InternalServerErrorException(String message, Result.Type type, Integer state, Object params) {
+    public InternalServerErrorException(String message, RestTypeEnum type, Integer state, Object params) {
         super(message);
         this.type = type;
         this.state = state;
         this.params = params;
     }
 
-    public InternalServerErrorException(String message, Result.Type type, Integer state, Object params, Object data) {
+    public InternalServerErrorException(String message, RestTypeEnum type, Integer state, Object params, Object data) {
         super(message);
         this.type = type;
         this.state = state;
@@ -45,13 +45,13 @@ public class InternalServerErrorException extends RuntimeException {
         this.data = data;
     }
 
-    public InternalServerErrorException(String message, Result.Type type, Object params) {
+    public InternalServerErrorException(String message, RestTypeEnum type, Object params) {
         super(message);
         this.type = type;
         this.params = params;
     }
 
-    public InternalServerErrorException(String message, Result.Type type, Object params, Object data) {
+    public InternalServerErrorException(String message, RestTypeEnum type, Object params, Object data) {
         super(message);
         this.type = type;
         this.params = params;
@@ -87,11 +87,11 @@ public class InternalServerErrorException extends RuntimeException {
         this.data = data;
     }
 
-    public Result.Type getType() {
+    public RestTypeEnum getType() {
         return type;
     }
 
-    public void setType(Result.Type type) {
+    public void setType(RestTypeEnum type) {
         this.type = type;
     }
 
