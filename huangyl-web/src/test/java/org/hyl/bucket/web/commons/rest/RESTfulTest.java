@@ -10,7 +10,7 @@ import org.junit.Test;
 
 import java.util.*;
 
-public class RestUtilTest {
+public class RESTfulTest {
 
     private Integer state;
 
@@ -50,7 +50,7 @@ public class RestUtilTest {
         a.setState(RestMessageEnum.SUCCESS.getState());
         a.setMessage(RestMessageEnum.SUCCESS.getMessage());
         a.setSuccess(NetworkEnum.SUCCESS.isSuccess());
-        compare(a, RestUtil.success());
+        compare(a, RESTful.success());
     }
 
     @Test
@@ -59,7 +59,7 @@ public class RestUtilTest {
         a.setState(state);
         a.setMessage(RestMessageEnum.SUCCESS.getMessage());
         a.setSuccess(NetworkEnum.SUCCESS.isSuccess());
-        compare(a, RestUtil.success(state));
+        compare(a, RESTful.success(state));
     }
 
     @Test
@@ -68,7 +68,7 @@ public class RestUtilTest {
         a.setState(state);
         a.setMessage(message);
         a.setSuccess(NetworkEnum.SUCCESS.isSuccess());
-        compare(a, RestUtil.success(state, message));
+        compare(a, RESTful.success(state, message));
     }
 
     @Test
@@ -78,7 +78,7 @@ public class RestUtilTest {
         a.setMessage(message);
         a.setData(data);
         a.setSuccess(NetworkEnum.SUCCESS.isSuccess());
-        compare(a, RestUtil.success(state, message, data));
+        compare(a, RESTful.success(state, message, data));
     }
 
     @Test
@@ -89,7 +89,7 @@ public class RestUtilTest {
         a.setSuccess(NetworkEnum.SUCCESS.isSuccess());
         a.setData(data);
         a.setParams(params);
-        compare(a, RestUtil.success(state, message, data, params));
+        compare(a, RESTful.success(state, message, data, params));
     }
 
     @Test
@@ -99,7 +99,7 @@ public class RestUtilTest {
         a.setMessage(RestMessageEnum.SUCCESS.getMessage());
         a.setSuccess(NetworkEnum.SUCCESS.isSuccess());
         a.setData(data);
-        compare(a, RestUtil.success(state, data));
+        compare(a, RESTful.success(state, data));
     }
 
     @Test
@@ -110,7 +110,7 @@ public class RestUtilTest {
         a.setSuccess(NetworkEnum.SUCCESS.isSuccess());
         a.setData(data);
         a.setParams(params);
-        compare(a, RestUtil.success(state, data, params));
+        compare(a, RESTful.success(state, data, params));
     }
 
     @Test
@@ -119,7 +119,7 @@ public class RestUtilTest {
         a.setState(RestMessageEnum.SUCCESS.getState());
         a.setMessage(message);
         a.setSuccess(NetworkEnum.SUCCESS.isSuccess());
-        compare(a, RestUtil.success(message));
+        compare(a, RESTful.success(message));
     }
 
     @Test
@@ -129,7 +129,7 @@ public class RestUtilTest {
         a.setMessage(message);
         a.setSuccess(NetworkEnum.SUCCESS.isSuccess());
         a.setData(data);
-        compare(a, RestUtil.success(message, data));
+        compare(a, RESTful.success(message, data));
     }
 
     @Test
@@ -140,7 +140,7 @@ public class RestUtilTest {
         a.setSuccess(NetworkEnum.SUCCESS.isSuccess());
         a.setData(data);
         a.setParams(params);
-        compare(a, RestUtil.success(message, data, params));
+        compare(a, RESTful.success(message, data, params));
     }
 
     @Test
@@ -150,7 +150,7 @@ public class RestUtilTest {
         a.setMessage(RestMessageEnum.SUCCESS.getMessage());
         a.setSuccess(NetworkEnum.SUCCESS.isSuccess());
         a.setData(data);
-        compare(a, RestUtil.success(data));
+        compare(a, RESTful.success(data));
     }
 
     @Test
@@ -161,7 +161,7 @@ public class RestUtilTest {
         a.setSuccess(NetworkEnum.SUCCESS.isSuccess());
         a.setData(data);
         a.setParams(params);
-        compare(a, RestUtil.success(data, params));
+        compare(a, RESTful.success(data, params));
     }
 
     @Test
@@ -171,7 +171,7 @@ public class RestUtilTest {
             a.setState(RestMessageEnum.getState(NetworkEnum.SUCCESS, type));
             a.setMessage(RestMessageEnum.getMessage(NetworkEnum.SUCCESS, type));
             a.setSuccess(NetworkEnum.SUCCESS.isSuccess());
-            compare(a, RestUtil.success(type));
+            compare(a, RESTful.success(type));
         }
     }
 
@@ -182,7 +182,7 @@ public class RestUtilTest {
             a.setState(RestMessageEnum.getState(NetworkEnum.SUCCESS, type, state));
             a.setMessage(RestMessageEnum.getMessage(NetworkEnum.SUCCESS, type));
             a.setSuccess(NetworkEnum.SUCCESS.isSuccess());
-            compare(a, RestUtil.success(type, state));
+            compare(a, RESTful.success(type, state));
         }
     }
 
@@ -193,7 +193,7 @@ public class RestUtilTest {
             a.setState(RestMessageEnum.getState(NetworkEnum.SUCCESS, type, state));
             a.setMessage(RestMessageEnum.getMessage(NetworkEnum.SUCCESS, type, message));
             a.setSuccess(NetworkEnum.SUCCESS.isSuccess());
-            compare(a, RestUtil.success(type, state, message));
+            compare(a, RESTful.success(type, state, message));
         }
     }
 
@@ -205,7 +205,7 @@ public class RestUtilTest {
             a.setMessage(RestMessageEnum.getMessage(NetworkEnum.SUCCESS, type, message));
             a.setSuccess(NetworkEnum.SUCCESS.isSuccess());
             a.setData(data);
-            compare(a, RestUtil.success(type, state, message, data));
+            compare(a, RESTful.success(type, state, message, data));
         }
     }
 
@@ -218,7 +218,7 @@ public class RestUtilTest {
             a.setSuccess(NetworkEnum.SUCCESS.isSuccess());
             a.setData(data);
             a.setParams(params);
-            compare(a, RestUtil.success(type, state, message, data, params));
+            compare(a, RESTful.success(type, state, message, data, params));
         }
     }
 
@@ -230,7 +230,7 @@ public class RestUtilTest {
             a.setMessage(RestMessageEnum.getMessage(NetworkEnum.SUCCESS, type));
             a.setSuccess(NetworkEnum.SUCCESS.isSuccess());
             a.setData(data);
-            compare(a, RestUtil.success(type, state, data));
+            compare(a, RESTful.success(type, state, data));
         }
     }
 
@@ -243,7 +243,7 @@ public class RestUtilTest {
             a.setSuccess(NetworkEnum.SUCCESS.isSuccess());
             a.setData(data);
             a.setParams(params);
-            compare(a, RestUtil.success(type, state, data, params));
+            compare(a, RESTful.success(type, state, data, params));
         }
     }
 
@@ -254,7 +254,7 @@ public class RestUtilTest {
             a.setState(RestMessageEnum.getState(NetworkEnum.SUCCESS, type));
             a.setMessage(RestMessageEnum.getMessage(NetworkEnum.SUCCESS, type, message));
             a.setSuccess(NetworkEnum.SUCCESS.isSuccess());
-            compare(a, RestUtil.success(type, message));
+            compare(a, RESTful.success(type, message));
         }
     }
 
@@ -266,7 +266,7 @@ public class RestUtilTest {
             a.setMessage(RestMessageEnum.getMessage(NetworkEnum.SUCCESS, type, message));
             a.setSuccess(NetworkEnum.SUCCESS.isSuccess());
             a.setData(data);
-            compare(a, RestUtil.success(type, message, data));
+            compare(a, RESTful.success(type, message, data));
         }
     }
 
@@ -279,7 +279,7 @@ public class RestUtilTest {
             a.setSuccess(NetworkEnum.SUCCESS.isSuccess());
             a.setData(data);
             a.setParams(params);
-            compare(a, RestUtil.success(type, message, data, params));
+            compare(a, RESTful.success(type, message, data, params));
         }
     }
 
@@ -291,7 +291,7 @@ public class RestUtilTest {
             a.setMessage(RestMessageEnum.getMessage(NetworkEnum.SUCCESS, type));
             a.setSuccess(NetworkEnum.SUCCESS.isSuccess());
             a.setData(data);
-            compare(a, RestUtil.success(type, data));
+            compare(a, RESTful.success(type, data));
         }
     }
 
@@ -304,7 +304,7 @@ public class RestUtilTest {
             a.setSuccess(NetworkEnum.SUCCESS.isSuccess());
             a.setData(data);
             a.setParams(params);
-            compare(a, RestUtil.success(type, data, params));
+            compare(a, RESTful.success(type, data, params));
         }
     }
 
@@ -315,7 +315,7 @@ public class RestUtilTest {
         a.setState(RestMessageEnum.ERROR.getState());
         a.setMessage(RestMessageEnum.ERROR.getMessage());
         a.setSuccess(NetworkEnum.ERROR.isSuccess());
-        compare(a, RestUtil.error(e));
+        compare(a, RESTful.error(e));
     }
 
     @Test
@@ -325,7 +325,7 @@ public class RestUtilTest {
         a.setState(state);
         a.setMessage(RestMessageEnum.ERROR.getMessage());
         a.setSuccess(NetworkEnum.ERROR.isSuccess());
-        compare(a, RestUtil.error(e, state));
+        compare(a, RESTful.error(e, state));
     }
 
     @Test
@@ -335,7 +335,7 @@ public class RestUtilTest {
         a.setState(state);
         a.setMessage(message);
         a.setSuccess(NetworkEnum.ERROR.isSuccess());
-        compare(a, RestUtil.error(e, state, message));
+        compare(a, RESTful.error(e, state, message));
     }
 
     @Test
@@ -346,7 +346,7 @@ public class RestUtilTest {
         a.setMessage(message);
         a.setSuccess(NetworkEnum.ERROR.isSuccess());
         a.setData(data);
-        compare(a, RestUtil.error(e, state, message, data));
+        compare(a, RESTful.error(e, state, message, data));
     }
 
     @Test
@@ -358,7 +358,7 @@ public class RestUtilTest {
         a.setSuccess(NetworkEnum.ERROR.isSuccess());
         a.setData(data);
         a.setParams(params);
-        compare(a, RestUtil.error(e, state, message, data, params));
+        compare(a, RESTful.error(e, state, message, data, params));
     }
 
     @Test
@@ -369,7 +369,7 @@ public class RestUtilTest {
         a.setMessage(RestMessageEnum.ERROR.getMessage());
         a.setSuccess(NetworkEnum.ERROR.isSuccess());
         a.setData(data);
-        compare(a, RestUtil.error(e, state, data));
+        compare(a, RESTful.error(e, state, data));
     }
 
     @Test
@@ -381,7 +381,7 @@ public class RestUtilTest {
         a.setSuccess(NetworkEnum.ERROR.isSuccess());
         a.setData(data);
         a.setParams(params);
-        compare(a, RestUtil.error(e, state, data, params));
+        compare(a, RESTful.error(e, state, data, params));
     }
 
     @Test
@@ -391,7 +391,7 @@ public class RestUtilTest {
         a.setState(RestMessageEnum.ERROR.getState());
         a.setMessage(message);
         a.setSuccess(NetworkEnum.ERROR.isSuccess());
-        compare(a, RestUtil.error(e, message));
+        compare(a, RESTful.error(e, message));
     }
 
     @Test
@@ -402,7 +402,7 @@ public class RestUtilTest {
         a.setMessage(message);
         a.setSuccess(NetworkEnum.ERROR.isSuccess());
         a.setData(data);
-        compare(a, RestUtil.error(e, message, data));
+        compare(a, RESTful.error(e, message, data));
     }
 
     @Test
@@ -414,7 +414,7 @@ public class RestUtilTest {
         a.setSuccess(NetworkEnum.ERROR.isSuccess());
         a.setData(data);
         a.setParams(params);
-        compare(a, RestUtil.error(e, message, data, params));
+        compare(a, RESTful.error(e, message, data, params));
     }
 
     @Test
@@ -425,7 +425,7 @@ public class RestUtilTest {
         a.setMessage(RestMessageEnum.ERROR.getMessage());
         a.setSuccess(NetworkEnum.ERROR.isSuccess());
         a.setData(data);
-        compare(a, RestUtil.error(e, data));
+        compare(a, RESTful.error(e, data));
     }
 
     @Test
@@ -437,7 +437,7 @@ public class RestUtilTest {
         a.setSuccess(NetworkEnum.ERROR.isSuccess());
         a.setData(data);
         a.setParams(params);
-        compare(a, RestUtil.error(e, data, params));
+        compare(a, RESTful.error(e, data, params));
     }
 
     @Test
@@ -448,7 +448,7 @@ public class RestUtilTest {
             a.setState(RestMessageEnum.getState(NetworkEnum.ERROR, type));
             a.setMessage(RestMessageEnum.getMessage(NetworkEnum.ERROR, type));
             a.setSuccess(NetworkEnum.ERROR.isSuccess());
-            compare(a, RestUtil.error(type, e));
+            compare(a, RESTful.error(type, e));
         }
     }
 
@@ -460,7 +460,7 @@ public class RestUtilTest {
             a.setState(RestMessageEnum.getState(NetworkEnum.ERROR, type, state));
             a.setMessage(RestMessageEnum.getMessage(NetworkEnum.ERROR, type));
             a.setSuccess(NetworkEnum.ERROR.isSuccess());
-            compare(a, RestUtil.error(type, e, state));
+            compare(a, RESTful.error(type, e, state));
         }
     }
 
@@ -472,7 +472,7 @@ public class RestUtilTest {
             a.setState(RestMessageEnum.getState(NetworkEnum.ERROR, type, state));
             a.setMessage(RestMessageEnum.getMessage(NetworkEnum.ERROR, type, message));
             a.setSuccess(NetworkEnum.ERROR.isSuccess());
-            compare(a, RestUtil.error(type, e, state, message));
+            compare(a, RESTful.error(type, e, state, message));
         }
     }
 
@@ -485,7 +485,7 @@ public class RestUtilTest {
             a.setMessage(RestMessageEnum.getMessage(NetworkEnum.ERROR, type, message));
             a.setSuccess(NetworkEnum.ERROR.isSuccess());
             a.setData(data);
-            compare(a, RestUtil.error(type, e, state, message, data));
+            compare(a, RESTful.error(type, e, state, message, data));
         }
     }
 
@@ -499,7 +499,7 @@ public class RestUtilTest {
             a.setSuccess(NetworkEnum.ERROR.isSuccess());
             a.setData(data);
             a.setParams(params);
-            compare(a, RestUtil.error(type, e, state, message, data, params));
+            compare(a, RESTful.error(type, e, state, message, data, params));
         }
     }
 
@@ -512,7 +512,7 @@ public class RestUtilTest {
             a.setMessage(RestMessageEnum.getMessage(NetworkEnum.ERROR, type));
             a.setSuccess(NetworkEnum.ERROR.isSuccess());
             a.setData(data);
-            compare(a, RestUtil.error(type, e, state, data));
+            compare(a, RESTful.error(type, e, state, data));
         }
     }
 
@@ -526,7 +526,7 @@ public class RestUtilTest {
             a.setSuccess(NetworkEnum.ERROR.isSuccess());
             a.setData(data);
             a.setParams(params);
-            compare(a, RestUtil.error(type, e, state, data, params));
+            compare(a, RESTful.error(type, e, state, data, params));
         }
     }
 
@@ -539,7 +539,7 @@ public class RestUtilTest {
             a.setState(RestMessageEnum.getState(NetworkEnum.ERROR, type));
             a.setMessage(RestMessageEnum.getMessage(NetworkEnum.ERROR, type, message));
             a.setSuccess(NetworkEnum.ERROR.isSuccess());
-            compare(a, RestUtil.error(type, e, message));
+            compare(a, RESTful.error(type, e, message));
         }
     }
 
@@ -552,7 +552,7 @@ public class RestUtilTest {
             a.setMessage(RestMessageEnum.getMessage(NetworkEnum.ERROR, type, message));
             a.setSuccess(NetworkEnum.ERROR.isSuccess());
             a.setData(data);
-            compare(a, RestUtil.error(type, e, message, data));
+            compare(a, RESTful.error(type, e, message, data));
         }
     }
 
@@ -566,7 +566,7 @@ public class RestUtilTest {
             a.setSuccess(NetworkEnum.ERROR.isSuccess());
             a.setData(data);
             a.setParams(params);
-            compare(a, RestUtil.error(type, e, message, data, params));
+            compare(a, RESTful.error(type, e, message, data, params));
         }
     }
 
@@ -579,7 +579,7 @@ public class RestUtilTest {
             a.setMessage(RestMessageEnum.getMessage(NetworkEnum.ERROR, type));
             a.setSuccess(NetworkEnum.ERROR.isSuccess());
             a.setData(data);
-            compare(a, RestUtil.error(type, e, data));
+            compare(a, RESTful.error(type, e, data));
         }
     }
 
@@ -593,7 +593,7 @@ public class RestUtilTest {
             a.setSuccess(NetworkEnum.ERROR.isSuccess());
             a.setData(data);
             a.setParams(params);
-            compare(a, RestUtil.error(type, e, data, params));
+            compare(a, RESTful.error(type, e, data, params));
         }
     }
 }

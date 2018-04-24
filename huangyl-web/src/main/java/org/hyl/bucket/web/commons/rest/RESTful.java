@@ -5,7 +5,7 @@ import org.hyl.bucket.commons.result.enums.NetworkEnum;
 import org.hyl.bucket.web.commons.rest.enums.RestTypeEnum;
 import org.hyl.bucket.web.commons.rest.service.dto.RestMessageDTO;
 
-public interface RestUtil {
+public interface RESTful {
 
     static Message success() {
         return RestMessageDTO.adapt(new RestMessageDTO(NetworkEnum.SUCCESS, RestTypeEnum.DEFAULT, null, null, null, null));
