@@ -5,7 +5,6 @@ import org.hyl.bucket.commons.result.domain.Message;
 import org.hyl.bucket.commons.result.enums.NetworkEnum;
 import org.hyl.bucket.web.commons.rest.enums.RestMessageEnum;
 import org.hyl.bucket.web.commons.rest.enums.RestTypeEnum;
-import org.hyl.bucket.web.commons.rest.service.dto.RestMessageDTO;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -169,8 +168,8 @@ public class RestUtilTest {
     public void success12() throws Exception {
         for (RestTypeEnum type : RestTypeEnum.values()) {
             Message a = new Message();
-            a.setState(RestMessageDTO.getState(NetworkEnum.SUCCESS, type));
-            a.setMessage(RestMessageDTO.getMessage(NetworkEnum.SUCCESS, type));
+            a.setState(RestMessageEnum.getState(NetworkEnum.SUCCESS, type));
+            a.setMessage(RestMessageEnum.getMessage(NetworkEnum.SUCCESS, type));
             a.setSuccess(NetworkEnum.SUCCESS.isSuccess());
             compare(a, RestUtil.success(type));
         }
@@ -180,8 +179,8 @@ public class RestUtilTest {
     public void success13() throws Exception {
         for (RestTypeEnum type : RestTypeEnum.values()) {
             Message a = new Message();
-            a.setState(RestMessageDTO.getState(NetworkEnum.SUCCESS, type, state));
-            a.setMessage(RestMessageDTO.getMessage(NetworkEnum.SUCCESS, type));
+            a.setState(RestMessageEnum.getState(NetworkEnum.SUCCESS, type, state));
+            a.setMessage(RestMessageEnum.getMessage(NetworkEnum.SUCCESS, type));
             a.setSuccess(NetworkEnum.SUCCESS.isSuccess());
             compare(a, RestUtil.success(type, state));
         }
@@ -191,8 +190,8 @@ public class RestUtilTest {
     public void success14() throws Exception {
         for (RestTypeEnum type : RestTypeEnum.values()) {
             Message a = new Message();
-            a.setState(RestMessageDTO.getState(NetworkEnum.SUCCESS, type, state));
-            a.setMessage(RestMessageDTO.getMessage(NetworkEnum.SUCCESS, type, message));
+            a.setState(RestMessageEnum.getState(NetworkEnum.SUCCESS, type, state));
+            a.setMessage(RestMessageEnum.getMessage(NetworkEnum.SUCCESS, type, message));
             a.setSuccess(NetworkEnum.SUCCESS.isSuccess());
             compare(a, RestUtil.success(type, state, message));
         }
@@ -202,8 +201,8 @@ public class RestUtilTest {
     public void success15() throws Exception {
         for (RestTypeEnum type : RestTypeEnum.values()) {
             Message a = new Message();
-            a.setState(RestMessageDTO.getState(NetworkEnum.SUCCESS, type, state));
-            a.setMessage(RestMessageDTO.getMessage(NetworkEnum.SUCCESS, type, message));
+            a.setState(RestMessageEnum.getState(NetworkEnum.SUCCESS, type, state));
+            a.setMessage(RestMessageEnum.getMessage(NetworkEnum.SUCCESS, type, message));
             a.setSuccess(NetworkEnum.SUCCESS.isSuccess());
             a.setData(data);
             compare(a, RestUtil.success(type, state, message, data));
@@ -214,8 +213,8 @@ public class RestUtilTest {
     public void success16() throws Exception {
         for (RestTypeEnum type : RestTypeEnum.values()) {
             Message a = new Message();
-            a.setState(RestMessageDTO.getState(NetworkEnum.SUCCESS, type, state));
-            a.setMessage(RestMessageDTO.getMessage(NetworkEnum.SUCCESS, type, message));
+            a.setState(RestMessageEnum.getState(NetworkEnum.SUCCESS, type, state));
+            a.setMessage(RestMessageEnum.getMessage(NetworkEnum.SUCCESS, type, message));
             a.setSuccess(NetworkEnum.SUCCESS.isSuccess());
             a.setData(data);
             a.setParams(params);
@@ -227,8 +226,8 @@ public class RestUtilTest {
     public void success17() throws Exception {
         for (RestTypeEnum type : RestTypeEnum.values()) {
             Message a = new Message();
-            a.setState(RestMessageDTO.getState(NetworkEnum.SUCCESS, type, state));
-            a.setMessage(RestMessageDTO.getMessage(NetworkEnum.SUCCESS, type));
+            a.setState(RestMessageEnum.getState(NetworkEnum.SUCCESS, type, state));
+            a.setMessage(RestMessageEnum.getMessage(NetworkEnum.SUCCESS, type));
             a.setSuccess(NetworkEnum.SUCCESS.isSuccess());
             a.setData(data);
             compare(a, RestUtil.success(type, state, data));
@@ -239,8 +238,8 @@ public class RestUtilTest {
     public void success18() throws Exception {
         for (RestTypeEnum type : RestTypeEnum.values()) {
             Message a = new Message();
-            a.setState(RestMessageDTO.getState(NetworkEnum.SUCCESS, type, state));
-            a.setMessage(RestMessageDTO.getMessage(NetworkEnum.SUCCESS, type));
+            a.setState(RestMessageEnum.getState(NetworkEnum.SUCCESS, type, state));
+            a.setMessage(RestMessageEnum.getMessage(NetworkEnum.SUCCESS, type));
             a.setSuccess(NetworkEnum.SUCCESS.isSuccess());
             a.setData(data);
             a.setParams(params);
@@ -252,8 +251,8 @@ public class RestUtilTest {
     public void success19() throws Exception {
         for (RestTypeEnum type : RestTypeEnum.values()) {
             Message a = new Message();
-            a.setState(RestMessageDTO.getState(NetworkEnum.SUCCESS, type));
-            a.setMessage(RestMessageDTO.getMessage(NetworkEnum.SUCCESS, type, message));
+            a.setState(RestMessageEnum.getState(NetworkEnum.SUCCESS, type));
+            a.setMessage(RestMessageEnum.getMessage(NetworkEnum.SUCCESS, type, message));
             a.setSuccess(NetworkEnum.SUCCESS.isSuccess());
             compare(a, RestUtil.success(type, message));
         }
@@ -263,8 +262,8 @@ public class RestUtilTest {
     public void success20() throws Exception {
         for (RestTypeEnum type : RestTypeEnum.values()) {
             Message a = new Message();
-            a.setState(RestMessageDTO.getState(NetworkEnum.SUCCESS, type));
-            a.setMessage(RestMessageDTO.getMessage(NetworkEnum.SUCCESS, type, message));
+            a.setState(RestMessageEnum.getState(NetworkEnum.SUCCESS, type));
+            a.setMessage(RestMessageEnum.getMessage(NetworkEnum.SUCCESS, type, message));
             a.setSuccess(NetworkEnum.SUCCESS.isSuccess());
             a.setData(data);
             compare(a, RestUtil.success(type, message, data));
@@ -275,8 +274,8 @@ public class RestUtilTest {
     public void success21() throws Exception {
         for (RestTypeEnum type : RestTypeEnum.values()) {
             Message a = new Message();
-            a.setState(RestMessageDTO.getState(NetworkEnum.SUCCESS, type));
-            a.setMessage(RestMessageDTO.getMessage(NetworkEnum.SUCCESS, type, message));
+            a.setState(RestMessageEnum.getState(NetworkEnum.SUCCESS, type));
+            a.setMessage(RestMessageEnum.getMessage(NetworkEnum.SUCCESS, type, message));
             a.setSuccess(NetworkEnum.SUCCESS.isSuccess());
             a.setData(data);
             a.setParams(params);
@@ -288,8 +287,8 @@ public class RestUtilTest {
     public void success22() throws Exception {
         for (RestTypeEnum type : RestTypeEnum.values()) {
             Message a = new Message();
-            a.setState(RestMessageDTO.getState(NetworkEnum.SUCCESS, type));
-            a.setMessage(RestMessageDTO.getMessage(NetworkEnum.SUCCESS, type));
+            a.setState(RestMessageEnum.getState(NetworkEnum.SUCCESS, type));
+            a.setMessage(RestMessageEnum.getMessage(NetworkEnum.SUCCESS, type));
             a.setSuccess(NetworkEnum.SUCCESS.isSuccess());
             a.setData(data);
             compare(a, RestUtil.success(type, data));
@@ -300,8 +299,8 @@ public class RestUtilTest {
     public void success23() throws Exception {
         for (RestTypeEnum type : RestTypeEnum.values()) {
             Message a = new Message();
-            a.setState(RestMessageDTO.getState(NetworkEnum.SUCCESS, type));
-            a.setMessage(RestMessageDTO.getMessage(NetworkEnum.SUCCESS, type));
+            a.setState(RestMessageEnum.getState(NetworkEnum.SUCCESS, type));
+            a.setMessage(RestMessageEnum.getMessage(NetworkEnum.SUCCESS, type));
             a.setSuccess(NetworkEnum.SUCCESS.isSuccess());
             a.setData(data);
             a.setParams(params);
@@ -446,8 +445,8 @@ public class RestUtilTest {
         for (RestTypeEnum type : RestTypeEnum.values()) {
             Message a = new Message();
             a.setE(e);
-            a.setState(RestMessageDTO.getState(NetworkEnum.ERROR, type));
-            a.setMessage(RestMessageDTO.getMessage(NetworkEnum.ERROR, type));
+            a.setState(RestMessageEnum.getState(NetworkEnum.ERROR, type));
+            a.setMessage(RestMessageEnum.getMessage(NetworkEnum.ERROR, type));
             a.setSuccess(NetworkEnum.ERROR.isSuccess());
             compare(a, RestUtil.error(type, e));
         }
@@ -458,8 +457,8 @@ public class RestUtilTest {
         for (RestTypeEnum type : RestTypeEnum.values()) {
             Message a = new Message();
             a.setE(e);
-            a.setState(RestMessageDTO.getState(NetworkEnum.ERROR, type, state));
-            a.setMessage(RestMessageDTO.getMessage(NetworkEnum.ERROR, type));
+            a.setState(RestMessageEnum.getState(NetworkEnum.ERROR, type, state));
+            a.setMessage(RestMessageEnum.getMessage(NetworkEnum.ERROR, type));
             a.setSuccess(NetworkEnum.ERROR.isSuccess());
             compare(a, RestUtil.error(type, e, state));
         }
@@ -470,8 +469,8 @@ public class RestUtilTest {
         for (RestTypeEnum type : RestTypeEnum.values()) {
             Message a = new Message();
             a.setE(e);
-            a.setState(RestMessageDTO.getState(NetworkEnum.ERROR, type, state));
-            a.setMessage(RestMessageDTO.getMessage(NetworkEnum.ERROR, type, message));
+            a.setState(RestMessageEnum.getState(NetworkEnum.ERROR, type, state));
+            a.setMessage(RestMessageEnum.getMessage(NetworkEnum.ERROR, type, message));
             a.setSuccess(NetworkEnum.ERROR.isSuccess());
             compare(a, RestUtil.error(type, e, state, message));
         }
@@ -482,8 +481,8 @@ public class RestUtilTest {
         for (RestTypeEnum type : RestTypeEnum.values()) {
             Message a = new Message();
             a.setE(e);
-            a.setState(RestMessageDTO.getState(NetworkEnum.ERROR, type, state));
-            a.setMessage(RestMessageDTO.getMessage(NetworkEnum.ERROR, type, message));
+            a.setState(RestMessageEnum.getState(NetworkEnum.ERROR, type, state));
+            a.setMessage(RestMessageEnum.getMessage(NetworkEnum.ERROR, type, message));
             a.setSuccess(NetworkEnum.ERROR.isSuccess());
             a.setData(data);
             compare(a, RestUtil.error(type, e, state, message, data));
@@ -495,8 +494,8 @@ public class RestUtilTest {
         for (RestTypeEnum type : RestTypeEnum.values()) {
             Message a = new Message();
             a.setE(e);
-            a.setState(RestMessageDTO.getState(NetworkEnum.ERROR, type, state));
-            a.setMessage(RestMessageDTO.getMessage(NetworkEnum.ERROR, type, message));
+            a.setState(RestMessageEnum.getState(NetworkEnum.ERROR, type, state));
+            a.setMessage(RestMessageEnum.getMessage(NetworkEnum.ERROR, type, message));
             a.setSuccess(NetworkEnum.ERROR.isSuccess());
             a.setData(data);
             a.setParams(params);
@@ -509,8 +508,8 @@ public class RestUtilTest {
         for (RestTypeEnum type : RestTypeEnum.values()) {
             Message a = new Message();
             a.setE(e);
-            a.setState(RestMessageDTO.getState(NetworkEnum.ERROR, type, state));
-            a.setMessage(RestMessageDTO.getMessage(NetworkEnum.ERROR, type));
+            a.setState(RestMessageEnum.getState(NetworkEnum.ERROR, type, state));
+            a.setMessage(RestMessageEnum.getMessage(NetworkEnum.ERROR, type));
             a.setSuccess(NetworkEnum.ERROR.isSuccess());
             a.setData(data);
             compare(a, RestUtil.error(type, e, state, data));
@@ -522,8 +521,8 @@ public class RestUtilTest {
         for (RestTypeEnum type : RestTypeEnum.values()) {
             Message a = new Message();
             a.setE(e);
-            a.setState(RestMessageDTO.getState(NetworkEnum.ERROR, type, state));
-            a.setMessage(RestMessageDTO.getMessage(NetworkEnum.ERROR, type));
+            a.setState(RestMessageEnum.getState(NetworkEnum.ERROR, type, state));
+            a.setMessage(RestMessageEnum.getMessage(NetworkEnum.ERROR, type));
             a.setSuccess(NetworkEnum.ERROR.isSuccess());
             a.setData(data);
             a.setParams(params);
@@ -537,8 +536,8 @@ public class RestUtilTest {
         for (RestTypeEnum type : RestTypeEnum.values()) {
             Message a = new Message();
             a.setE(e);
-            a.setState(RestMessageDTO.getState(NetworkEnum.ERROR, type));
-            a.setMessage(RestMessageDTO.getMessage(NetworkEnum.ERROR, type, message));
+            a.setState(RestMessageEnum.getState(NetworkEnum.ERROR, type));
+            a.setMessage(RestMessageEnum.getMessage(NetworkEnum.ERROR, type, message));
             a.setSuccess(NetworkEnum.ERROR.isSuccess());
             compare(a, RestUtil.error(type, e, message));
         }
@@ -549,8 +548,8 @@ public class RestUtilTest {
         for (RestTypeEnum type : RestTypeEnum.values()) {
             Message a = new Message();
             a.setE(e);
-            a.setState(RestMessageDTO.getState(NetworkEnum.ERROR, type));
-            a.setMessage(RestMessageDTO.getMessage(NetworkEnum.ERROR, type, message));
+            a.setState(RestMessageEnum.getState(NetworkEnum.ERROR, type));
+            a.setMessage(RestMessageEnum.getMessage(NetworkEnum.ERROR, type, message));
             a.setSuccess(NetworkEnum.ERROR.isSuccess());
             a.setData(data);
             compare(a, RestUtil.error(type, e, message, data));
@@ -562,8 +561,8 @@ public class RestUtilTest {
         for (RestTypeEnum type : RestTypeEnum.values()) {
             Message a = new Message();
             a.setE(e);
-            a.setState(RestMessageDTO.getState(NetworkEnum.ERROR, type));
-            a.setMessage(RestMessageDTO.getMessage(NetworkEnum.ERROR, type, message));
+            a.setState(RestMessageEnum.getState(NetworkEnum.ERROR, type));
+            a.setMessage(RestMessageEnum.getMessage(NetworkEnum.ERROR, type, message));
             a.setSuccess(NetworkEnum.ERROR.isSuccess());
             a.setData(data);
             a.setParams(params);
@@ -576,8 +575,8 @@ public class RestUtilTest {
         for (RestTypeEnum type : RestTypeEnum.values()) {
             Message a = new Message();
             a.setE(e);
-            a.setState(RestMessageDTO.getState(NetworkEnum.ERROR, type));
-            a.setMessage(RestMessageDTO.getMessage(NetworkEnum.ERROR, type));
+            a.setState(RestMessageEnum.getState(NetworkEnum.ERROR, type));
+            a.setMessage(RestMessageEnum.getMessage(NetworkEnum.ERROR, type));
             a.setSuccess(NetworkEnum.ERROR.isSuccess());
             a.setData(data);
             compare(a, RestUtil.error(type, e, data));
@@ -589,8 +588,8 @@ public class RestUtilTest {
         for (RestTypeEnum type : RestTypeEnum.values()) {
             Message a = new Message();
             a.setE(e);
-            a.setState(RestMessageDTO.getState(NetworkEnum.ERROR, type));
-            a.setMessage(RestMessageDTO.getMessage(NetworkEnum.ERROR, type));
+            a.setState(RestMessageEnum.getState(NetworkEnum.ERROR, type));
+            a.setMessage(RestMessageEnum.getMessage(NetworkEnum.ERROR, type));
             a.setSuccess(NetworkEnum.ERROR.isSuccess());
             a.setData(data);
             a.setParams(params);
