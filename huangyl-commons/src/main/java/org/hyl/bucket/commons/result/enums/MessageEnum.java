@@ -5,7 +5,7 @@ import org.apache.commons.lang3.StringUtils;
 public enum MessageEnum {
 
     SUCCESS(200, "请求成功"),
-    ERROR(500, "请求失败，请稍后再试");
+    ERROR(400, "请求失败，请稍后再试");
 
     private final Integer state;
 
