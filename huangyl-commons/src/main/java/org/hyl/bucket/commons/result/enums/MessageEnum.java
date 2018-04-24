@@ -1,5 +1,7 @@
 package org.hyl.bucket.commons.result.enums;
 
+import org.apache.commons.lang3.StringUtils;
+
 public enum MessageEnum {
 
     SUCCESS(200, "请求成功"),
@@ -20,5 +22,19 @@ public enum MessageEnum {
 
     public String getMessage() {
         return message;
+    }
+
+    public static Integer getState(NetworkEnum network, Integer state) {
+        if (state != null) {
+            return state;
+        }
+        return NetworkEnum.SUCCESS == network ? MessageEnum.SUCCESS.getState() : MessageEnum.ERROR.getState();
+    }
+
+    public static String getMessage(NetworkEnum network, String message) {
+        if (StringUtils.isNotBlank(message)) {
+            return message;
+        }
+        return NetworkEnum.SUCCESS == network ? MessageEnum.SUCCESS.getMessage() : MessageEnum.ERROR.getMessage();
     }
 }
