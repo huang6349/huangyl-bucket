@@ -1,3 +1,38 @@
 # huangyl-web
 
 互联网操作模块
+
+## 使用方式
+
+* 添加`Maven`依赖
+
+```xml
+<repositories>
+    <repository>
+        <id>jitpack.io</id>
+        <url>https://jitpack.io</url>
+    </repository>
+</repositories>
+```
+
+```xml
+<dependency>
+    <groupId>com.github.huang6349.huangyl-bucket</groupId>
+    <artifactId>huangyl-web</artifactId>
+    <version>0.0.1</version>
+</dependency>
+```
+
+* 或者添加`Gradle`依赖
+
+```groovy
+repositories {
+    maven { url 'https://jitpack.io' }
+}
+```
+
+```groovy
+dependencies {
+    implementation 'com.github.huang6349.huangyl-bucket:huangyl-web:0.0.1'
+}
+```
