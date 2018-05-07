@@ -3,7 +3,7 @@
 [![](https://img.shields.io/badge/java-^1.8.0-orange.svg?style=flat-square)](http://www.oracle.com/technetwork/java/index.html)
 [![](https://img.shields.io/badge/gradle-4.3.1-brightgreen.svg?style=flat-square)](https://gradle.org)
 [![](https://img.shields.io/badge/license-Apache--2.0-blue.svg?style=flat-square)](https://www.apache.org/licenses/LICENSE-2.0.html)
-[![](https://jitpack.io/v/huang6349/huangyl-bucket.svg)](https://jitpack.io/#huang6349/huangyl-bucket)
+[![](https://jitpack.io/v/huang6349/huangyl-bucket.svg?style=flat-square)](https://jitpack.io/#huang6349/huangyl-bucket)
 
 基于Spring的全家桶方案
 
