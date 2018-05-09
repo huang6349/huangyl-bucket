@@ -42,7 +42,7 @@ dependencies {
 
 ## 文档
 
-* ### 基于[Message.java](../huangyl-commons/src/main/java/org/hyl/bucket/commons/result/domain/Message.java)的RESTful消息工具类 -> [RESTful.java](./src/main/java/org/hyl/bucket/web/commons/rest/RESTful.java)
+* ### 基于 [Message.java](../huangyl-commons/src/main/java/org/hyl/bucket/commons/result/domain/Message.java) 的RESTful消息工具类 -> [RESTful.java](./src/main/java/org/hyl/bucket/web/commons/rest/RESTful.java)
 
 * ### 自定义服务器异常 -> [InternalServerErrorException.java](./src/main/java/org/hyl/bucket/web/errors/InternalServerErrorException.java)
 

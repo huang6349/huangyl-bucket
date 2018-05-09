@@ -63,4 +63,4 @@ public class ExampleApplication {
 
 * ### 树形结构的数据审计超类 -> [AbstractLevelAuditingEntity.java](./src/main/java/org/hyl/bucket/data/auditing/level/domain/AbstractLevelAuditingEntity.java)
 
-* ### 基于[Message.java](../huangyl-commons/src/main/java/org/hyl/bucket/commons/result/domain/Message.java)的分页消息工具类 -> [PaginationUtil.java](./src/main/java/org/hyl/bucket/data/commons/pagination/PaginationUtil.java)
+* ### 基于 [Message.java](../huangyl-commons/src/main/java/org/hyl/bucket/commons/result/domain/Message.java) 的分页消息工具类 -> [PaginationUtil.java](./src/main/java/org/hyl/bucket/data/commons/pagination/PaginationUtil.java)
