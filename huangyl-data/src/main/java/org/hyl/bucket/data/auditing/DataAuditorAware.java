@@ -10,7 +10,7 @@ public class DataAuditorAware implements AuditorAware<String> {
 
     @Override
     public String getCurrentAuditor() {
-        logger.error("请实现[AuditorAware<String>]类，完成数据审计用户信息获取逻辑");
+        logger.error("请实现[hylDataAuditorAware]Bean（需要实现[AuditorAware<T>]接口），完成数据审计用户信息获取逻辑");
         throw new NullPointerException();
     }
 }

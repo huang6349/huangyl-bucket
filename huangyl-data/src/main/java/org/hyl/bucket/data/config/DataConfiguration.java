@@ -12,7 +12,7 @@ import org.springframework.data.jpa.repository.config.EnableJpaAuditing;
 public class DataConfiguration {
 
     @Bean
-    @ConditionalOnMissingBean(AuditorAware.class)
+    @ConditionalOnMissingBean(name = "hylDataAuditorAware")
     public AuditorAware<String> auditorAware() {
         return new DataAuditorAware();
     }
