@@ -52,4 +52,4 @@ dependencies {
 
 * DataAlreadyIDException 自定义数据编号已存在异常
 
-* ThrowableAdviceTrait 不抓全局异常返回统一消息的接口
+* ThrowableAdviceTrait 捕抓全局异常返回统一消息的接口
