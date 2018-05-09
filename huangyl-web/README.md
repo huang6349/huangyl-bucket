@@ -42,14 +42,14 @@ dependencies {
 
 ## 功能说明
 
-* RESTful 基于Message的RESTful消息工具类
+* [RESTful](./src/main/java/org/hyl/bucket/web/commons/rest/RESTful.java) 基于Message的RESTful消息工具类
 
-* InternalServerErrorException 自定义服务器异常
+* [InternalServerErrorException](./src/main/java/org/hyl/bucket/web/errors/InternalServerErrorException.java) 自定义服务器异常
 
-* BadRequestException 自定义请求错误异常
+* [BadRequestException](./src/main/java/org/hyl/bucket/web/errors/BadRequestException.java) 自定义请求错误异常
 
-* DataAlreadyExistException 自定义数据已经存在异常
+* [DataAlreadyExistException](./src/main/java/org/hyl/bucket/web/errors/DataAlreadyExistException.java) 自定义数据已经存在异常
 
-* DataAlreadyIDException 自定义数据编号已存在异常
+* [DataAlreadyIDException](./src/main/java/org/hyl/bucket/web/errors/DataAlreadyIDException.java) 自定义数据编号已存在异常
 
-* ThrowableAdviceTrait 捕抓全局异常返回统一消息的接口
+* [ThrowableAdviceTrait](./src/main/java/org/hyl/bucket/web/errors/ThrowableAdviceTrait.java) 捕抓全局异常返回统一消息的接口
