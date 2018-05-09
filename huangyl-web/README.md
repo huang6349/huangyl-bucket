@@ -1,5 +1,7 @@
 # huangyl-web
 
+[![](https://jitpack.io/v/huang6349/huangyl-bucket.svg?style=flat-square)](https://jitpack.io/#huang6349/huangyl-bucket)
+
 互联网操作模块
 
 ## 使用方式
@@ -19,7 +21,7 @@
 <dependency>
     <groupId>com.github.huang6349.huangyl-bucket</groupId>
     <artifactId>huangyl-web</artifactId>
-    <version>0.0.1</version>
+    <version>0.0.2</version>
 </dependency>
 ```
 
@@ -33,6 +35,6 @@ repositories {
 
 ```groovy
 dependencies {
-    implementation 'com.github.huang6349.huangyl-bucket:huangyl-web:0.0.1'
+    implementation 'com.github.huang6349.huangyl-bucket:huangyl-web:0.0.2'
 }
 ```
