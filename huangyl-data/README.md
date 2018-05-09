@@ -1,5 +1,6 @@
 # huangyl-data
 
+[![](https://img.shields.io/badge/java-^1.8.0-orange.svg?style=flat-square)](http://www.oracle.com/technetwork/java/index.html)
 [![](https://jitpack.io/v/huang6349/huangyl-bucket.svg?style=flat-square)](https://jitpack.io/#huang6349/huangyl-bucket)
 
 数据操作模块
@@ -51,3 +52,13 @@ public class ExampleApplication {
     }
 }
 ```
+
+## 功能说明
+
+* AbstractAuditingEntity 数据审计的超类
+
+* AbstractIdAuditingEntity 带ID的数据审计超类
+
+* AbstractLevelAuditingEntity 树形结构的数据审计超类
+
+* PaginationUtil 基于Message的分页消息工具类

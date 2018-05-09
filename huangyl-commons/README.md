@@ -1,5 +1,6 @@
 # huangyl-commons
 
+[![](https://img.shields.io/badge/java-^1.8.0-orange.svg?style=flat-square)](http://www.oracle.com/technetwork/java/index.html)
 [![](https://jitpack.io/v/huang6349/huangyl-bucket.svg?style=flat-square)](https://jitpack.io/#huang6349/huangyl-bucket)
 
 工具包模块
@@ -38,3 +39,9 @@ dependencies {
     implementation 'com.github.huang6349.huangyl-bucket:huangyl-commons:0.0.2'
 }
 ```
+
+## 功能说明
+
+* Message 统一的消息实体
+
+* ResultUtil 统一的消息工具类
