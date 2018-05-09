@@ -42,6 +42,6 @@ dependencies {
 
 ## 功能说明
 
-* [Message](./src/main/java/org/hyl/bucket/commons/result/domain/Message.java) 统一的消息实体
+* ### 统一的消息实体 -> [Message.java](./src/main/java/org/hyl/bucket/commons/result/domain/Message.java)
 
-* [ResultUtil](./src/main/java/org/hyl/bucket/commons/result/ResultUtil.java) 统一的消息工具类
+* ### 统一的消息工具类 -> [ResultUtil.java](./src/main/java/org/hyl/bucket/commons/result/ResultUtil.java)

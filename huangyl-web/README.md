@@ -5,7 +5,7 @@
 
 互联网操作模块
 
-## 使用方式
+## 下载
 
 * 添加`Maven`依赖
 
@@ -40,16 +40,16 @@ dependencies {
 }
 ```
 
-## 功能说明
+## 文档
 
-* [RESTful](./src/main/java/org/hyl/bucket/web/commons/rest/RESTful.java) 基于Message的RESTful消息工具类
+* ### 基于[Message.java](../huangyl-commons/src/main/java/org/hyl/bucket/commons/result/domain/Message.java)的RESTful消息工具类 -> [RESTful.java](./src/main/java/org/hyl/bucket/web/commons/rest/RESTful.java)
 
-* [InternalServerErrorException](./src/main/java/org/hyl/bucket/web/errors/InternalServerErrorException.java) 自定义服务器异常
+* ### 自定义服务器异常 -> [InternalServerErrorException.java](./src/main/java/org/hyl/bucket/web/errors/InternalServerErrorException.java)
 
-* [BadRequestException](./src/main/java/org/hyl/bucket/web/errors/BadRequestException.java) 自定义请求错误异常
+* ### 自定义请求错误异常 -> [BadRequestException.java](./src/main/java/org/hyl/bucket/web/errors/BadRequestException.java)
 
-* [DataAlreadyExistException](./src/main/java/org/hyl/bucket/web/errors/DataAlreadyExistException.java) 自定义数据已经存在异常
+* ### 自定义数据已经存在异常 -> [DataAlreadyExistException.java](./src/main/java/org/hyl/bucket/web/errors/DataAlreadyExistException.java)
 
-* [DataAlreadyIDException](./src/main/java/org/hyl/bucket/web/errors/DataAlreadyIDException.java) 自定义数据编号已存在异常
+* ### 自定义数据编号已存在异常 -> [DataAlreadyIDException.java](./src/main/java/org/hyl/bucket/web/errors/DataAlreadyIDException.java)
 
-* [ThrowableAdviceTrait](./src/main/java/org/hyl/bucket/web/errors/ThrowableAdviceTrait.java) 捕抓全局异常返回统一消息的接口
+* ### 捕抓全局异常返回统一消息的接口 -> [ThrowableAdviceTrait.java](./src/main/java/org/hyl/bucket/web/errors/ThrowableAdviceTrait.java)
