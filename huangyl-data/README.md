@@ -5,7 +5,7 @@
 
 数据操作模块
 
-## 使用方式
+## 下载
 
 * 添加`Maven`依赖
 
@@ -40,6 +40,8 @@ dependencies {
 }
 ```
 
+## 使用方式
+
 * 开启`@EnableDataModule`
 
 ```java
@@ -53,7 +55,7 @@ public class ExampleApplication {
 }
 ```
 
-## 功能说明
+## 文档
 
 * ### 数据审计的超类 -> [AbstractAuditingEntity.java](./src/main/java/org/hyl/bucket/data/auditing/domain/AbstractAuditingEntity.java)
 

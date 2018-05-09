@@ -5,7 +5,7 @@
 
 工具包模块
 
-## 使用方式
+## 下载
 
 * 添加`Maven`依赖
 
@@ -40,7 +40,7 @@ dependencies {
 }
 ```
 
-## 功能说明
+## 文档
 
 * ### 统一的消息实体 -> [Message.java](./src/main/java/org/hyl/bucket/commons/result/domain/Message.java)
 
