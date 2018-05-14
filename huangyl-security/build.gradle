@@ -1,0 +1,28 @@
+buildscript {
+    repositories {
+        mavenLocal()
+        maven { url 'http://maven.aliyun.com/nexus/content/groups/public' }
+        maven { url 'http://repo2.maven.org/maven2' }
+        jcenter()
+        mavenCentral()
+    }
+    dependencies {
+        classpath "org.springframework.boot:spring-boot-gradle-plugin:${spring_boot_version}"
+    }
+}
+
+apply plugin: 'java'
+apply plugin: 'idea'
+apply plugin: 'org.springframework.boot'
+
+sourceCompatibility = 1.8
+
+dependencies {
+    compile 'org.springframework.boot:spring-boot-starter'
+    compile 'org.springframework.boot:spring-boot-starter-security'
+    compile 'org.springframework.boot:spring-boot-starter-web'
+    compile project(':huangyl-commons')
+    testCompile 'org.springframework.boot:spring-boot-starter-test'
+    testCompile 'com.github.penggle:kaptcha:2.3.2'
+    testCompileOnly 'org.springframework.boot:spring-boot-devtools'
+}
